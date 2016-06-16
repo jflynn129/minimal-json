@@ -69,6 +69,7 @@ mjson_ensure_byte_(struct mjson_ctx *ctx, size_t byte)
   if (ctx->reader(ctx, &ctx->buffer[ctx->start + ctx->length], byte) < byte) {
     return MJSON_ERROR_READING;
   }
+  ctx->length += byte;
   return MJSON_OK;
 }
 
