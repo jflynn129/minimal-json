@@ -1,6 +1,11 @@
 #ifndef MJSON_H_
 #define MJSON_H_
 
+#include <stdint.h>
+#ifndef min
+#define min(a, b) ((a) > (b) ? (b) : (a))
+#endif  /* min */
+
 #define MJSON_TYPE_NULL 1
 #define MJSON_TYPE_TRUE 2
 #define MJSON_TYPE_FALSE 3
