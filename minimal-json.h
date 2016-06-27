@@ -39,6 +39,9 @@ struct mjson_ctx {
 
 #define MJSON_BUFFER_START_(ctx) ((ctx)->buffer + (ctx)->start)
 
+/* TODO: we can accept an optional length, so we won't read more data than
+ * needed when dealing with numbers directly
+ */
 void mjson_init(struct mjson_ctx *ctx, void *userdata, mjson_reader reader)
 {
   ctx->userdata = userdata;
